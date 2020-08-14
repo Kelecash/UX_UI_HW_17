@@ -1,0 +1,98 @@
+h1{
+    font-family: 'Roboto Mono';
+    font-size: 50px;
+    font-weight: normal;
+    color: #2B1F23;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #694556;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: #694556;
+}
+
+body b{
+    color: #2B1F23;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: stretch;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#nav-left{
+    display: flex;
+    align-self: left;
+    width: 50%;
+}
+
+#nav-right{
+    display: flex;
+    align-self: right;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+#hero-wrapper{
+    display: grid;
+    margin-left: 0px;
+    margin-top: 15 px;
+    height: 500px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+}
+
+#hero-image{
+    background-image: url(../images/hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: ;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    margin-top: 15px;
+}
+
+#hero-header{
+    grid-column: 2 / span 2;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+#hero-left{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    text-align: center;
+}
+
+#hero-right{
+    grid-column: 3 / span 2;
+    grid-row-start: 2;
+}
+
+.logo{
+    height: 50px;
+}
+
+#nav-right a{
+    padding: 10px;
+}
+
+#button{
+    background-color: #5BAA0A;
+    color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
