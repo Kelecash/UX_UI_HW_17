@@ -1,8 +1,24 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: stretch;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+nav a{
+    text-decoration-line: none;
+    color: #694556;
+}
+
 h1{
     font-family: 'Roboto Mono';
     font-size: 50px;
     font-weight: normal;
     color: #2B1F23;
+    text-align: center;
 }
 
 h2{
@@ -23,15 +39,6 @@ body b{
     color: #2B1F23;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: stretch;
-    padding: 15px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-}
 
 #nav-left{
     display: flex;
@@ -41,8 +48,8 @@ nav{
 
 #nav-right{
     display: flex;
-    align-self: right;
-    justify-content: space-evenly;
+    align-self: center;
+    justify-content: flex-end;
     width: 50%;
 }
 
@@ -57,13 +64,13 @@ nav{
 
 #hero-image{
     background-image: url(../images/hero.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-blend-mode: ;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    margin-top: 15px;
+    height: 100%;
+    z-index: -1;
 }
 
 #hero-header{
@@ -72,15 +79,18 @@ nav{
     text-align: center;
 }
 
+#hero-right{
+    grid-column: 3 / span 2;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    height: fit-content;
+    background-color: white;
+}
+
 #hero-left{
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     text-align: center;
-}
-
-#hero-right{
-    grid-column: 3 / span 2;
-    grid-row-start: 2;
 }
 
 .logo{
@@ -89,10 +99,84 @@ nav{
 
 #nav-right a{
     padding: 10px;
+    margin-left: 20%;
 }
 
 #button{
     background-color: #5BAA0A;
     color: white;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#about{
+    display: grid;
+    height: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-top: 15px;
+}
+
+#aboutheader{
+    grid-column: 2 / span 2;
+}
+
+#aboutcontainer{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    height: fit-content;
+    background-color: white;
+}
+
+#skills{
+    margin-top: 15px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+}
+
+#skillsheader{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+}
+
+#skill1{
+    grid-column: 1 / span 1;
+}
+
+#skill2{
+    grid-column: 2 / span 1;
+}
+
+#skill3{
+    grid-column: 3/ span 1;
+}
+
+.skillcontainer{
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: white;
+    margin-right: 15px;
+    grid-row: 2 / span 1;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+#footerleft{
+   width: 80%;
+   justify-self: flex-start; 
+   align-self: center;
+}
+
+#footerright{
+    justify-content: stretch;
+    align-self: flex-end;
+    width: 20%;
 }
