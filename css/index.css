@@ -1,3 +1,11 @@
+.mobile{
+    display: none;
+}
+
+.mobile-img{
+    display: none;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -15,7 +23,7 @@ nav a{
 
 h1{
     font-family: 'Roboto Mono';
-    font-size: 50px;
+    font-size: 45px;
     font-weight: normal;
     color: #2B1F23;
     text-align: center;
@@ -23,7 +31,7 @@ h1{
 
 h2{
     font-family: 'Roboto Mono';
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     color: #694556;
 }
@@ -56,10 +64,10 @@ body b{
 #hero-wrapper{
     display: grid;
     margin-left: 0px;
-    margin-top: 15 px;
-    height: 500px;
+    min-height: 600px;
+    height: fit-content;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 25% 25% 50%;
 }
 
 #hero-image{
@@ -68,33 +76,35 @@ body b{
     background-repeat: no-repeat;
     background-position: center;
     grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-    height: 100%;
+    grid-row: 1 / span 3;
     z-index: -1;
 }
 
 #hero-header{
-    grid-column: 2 / span 2;
-    grid-row-start: 1;
-    text-align: center;
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    text-align: left;
 }
 
 #hero-right{
     grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
     padding: 15px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    height: fit-content;
     background-color: white;
 }
 
 #hero-left{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    text-align: center;
+    grid-column-end: 3;
+    grid-row: 3 / span 2;
+    text-align: right;
+    margin-right: 15px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .logo{
-    height: 50px;
+    height: 40px;
 }
 
 #nav-right a{
@@ -110,7 +120,7 @@ body b{
 
 #about{
     display: grid;
-    height: auto;
+    height: fit-content;
     grid-template-columns: 25% 25% 25% 25%;
     margin-top: 15px;
 }
@@ -131,9 +141,9 @@ body b{
 #skills{
     margin-top: 15px;
     display: grid;
-    height: auto;
+    height: fit-content;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 30% 70%;
 }
 
 #skillsheader{
@@ -159,6 +169,7 @@ body b{
     background-color: white;
     margin-right: 15px;
     grid-row: 2 / span 1;
+    height: 250px;
 }
 
 .skillcontainer h2{
@@ -169,20 +180,22 @@ footer{
     display: flex;
     flex-direction: row;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 50px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 #footerleft{
-   width: 80%;
+   width: 70%;
    justify-self: flex-start; 
    align-self: center;
 }
 
 #footerright{
-    justify-content: stretch;
-    align-self: flex-end;
-    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 30%;
 }
 
 #myworkwrapper{
@@ -206,7 +219,6 @@ footer{
     text-align: center;  
     margin-left: 15px;
     margin-top: 15px;
-    align-items: center;
 }
 
 #myworkheader{
@@ -227,4 +239,125 @@ footer{
 #writing{
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
+}
+
+
+
+/* Smaller Screen + Mobile CSS */
+
+@media only screen and (max-width: 700px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    }
+
+    .mobile-img{
+        display: unset;
+    }
+
+    #hamburger-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        height: 35px;
+        width: inherit;
+        text-align: right;
+    }
+
+    #burgline{
+        width: 35px;
+        height: 3px;
+        background-color: #5BAA0A;
+        margin: 3px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    }
+
+    #hero-wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70x 200px 200px 200px;
+        height: fit-content;
+        margin-top: none;
+    }
+
+    #hero-image{
+        grid-column: 1;
+        grid-row-end: 3;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
+    #hero-header{
+        grid-column: 1;
+        grid-row: 2 / span 1;
+        height: fit-content;
+    }
+
+    #hero-left{
+        grid-row: 2  / span 1;
+        grid-column: 2 / span 1;
+        text-align: right;
+    }
+
+    #hero-right{
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+    }
+
+    #aboutcontainer{
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 1;
+        padding: 15px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        height: fit-content;
+        background-color: white;
+    }
+
+    #skills{
+            margin-top: 15px;
+            display: grid;
+            height: fit-content;
+            grid-template-rows: 25% 25% 25% 25%;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+    #skillsheader{
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 2;
+        }
+        
+    #skill1{
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 2;
+        }
+        
+    #skill2{
+            grid-row: 3 / span 1;
+            grid-column: 1 / span 2;
+        }
+        
+    #skill3{
+            grid-row: 4/ span 1;
+            grid-column: 1 / span 2;
+        }
+    
+    .skillcontainer{
+            padding: 15px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+            background-color: white;
+            margin-top: 15px;
+            grid-row: 2 / span 1;
+            height: fit-content;
+        }
 }
