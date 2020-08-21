@@ -22,7 +22,7 @@ h1{
 }
 
 h2{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono';
     font-size: 20px;
     font-weight: normal;
     color: #694556;
@@ -161,6 +161,10 @@ body b{
     grid-row: 2 / span 1;
 }
 
+.skillcontainer h2{
+    text-align: center;
+}
+
 footer{
     display: flex;
     flex-direction: row;
@@ -179,4 +183,48 @@ footer{
     justify-content: stretch;
     align-self: flex-end;
     width: 20%;
+}
+
+#myworkwrapper{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 15px;
+}
+
+#casestudies{
+    padding: 25px;
+    padding-top: 100px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.workcontainer{
+    padding: 25px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    text-align: center;  
+    margin-left: 15px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+#myworkheader{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+}
+
+#graphicdesign{
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#photography{
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#writing{
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
 }
