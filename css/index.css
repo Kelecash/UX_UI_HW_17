@@ -67,7 +67,7 @@ body b{
     min-height: 600px;
     height: fit-content;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 50%;
+    grid-template-rows: 25% 1fr 1fr;
 }
 
 #hero-image{
@@ -89,7 +89,7 @@ body b{
 #hero-right{
     grid-column: 3 / span 2;
     grid-row: 2 / span 2;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     background-color: white;
     height: fit-content;
@@ -101,11 +101,20 @@ body b{
     text-align: right;
     margin-right: 15px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#socialcontainer{
+    align-self: flex-end;
 }
 
 .logo{
     height: 40px;
+}
+
+#logo{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 #nav-right a{
@@ -144,12 +153,11 @@ body b{
     display: grid;
     height: fit-content;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 25% 75%;
 }
 
 #skillsheader{
     grid-column: 2 / span 2;
-    grid-row: 1 / span 1;
 }
 
 #skill1{
@@ -170,10 +178,7 @@ body b{
     background-color: white;
     margin-right: 15px;
     grid-row: 2 / span 1;
-    height: 250px;
-}
-
-.skillcontainer h2{
+    height: 250pxx;
     text-align: center;
 }
 
@@ -323,7 +328,6 @@ footer{
         grid-row: 3 / span 2;
     }
 
-
     #aboutcontainer{
         grid-column: 1 / span 4;
         grid-row: 2 / span 1;
@@ -337,7 +341,7 @@ footer{
             margin-top: 15px;
             display: grid;
             height: fit-content;
-            grid-template-rows: 25% 25% 25% 25%;
+            grid-template-rows: .5fr 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr;
         }
         
@@ -366,14 +370,13 @@ footer{
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
             background-color: white;
             margin-top: 15px;
-            grid-row: 2 / span 1;
             height: fit-content;
         }
 
     #myworkwrapper{
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
             margin-top: 15px;
         }
         
@@ -382,14 +385,13 @@ footer{
             padding-top: 100px;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
             grid-column: 1 / span 2;
-            grid-row: 1 / span 2;
+            grid-row: 2 / span 2;
         }
         
     .workcontainer{
             padding: 25px;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
             text-align: center;  
-            margin-left: 15px;
             margin-top: 15px;
         }
         
@@ -400,16 +402,21 @@ footer{
         
     #graphicdesign{
             grid-column: 1 / span 1;
-            grid-row: 2 / span 1;
+            grid-row: 4 / span 1;
+            margin-right: 7.5px;
+            margin-left: 0px;
         }
         
     #photography{
             grid-column: 2 / span 1;
-            grid-row: 2 / span 1;
+            grid-row: 4 / span 1;
+            margin-left: 7.5px;
         }
         
     #writing{
             grid-column: 1 / span 1;
-            grid-row: 3 / span 1;
+            grid-row: 5 / span 1;
+            margin-right: 7.5px;
+            margin-left: 0px;
         }
 }
